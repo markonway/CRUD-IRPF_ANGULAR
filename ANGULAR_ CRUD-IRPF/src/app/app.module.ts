@@ -37,6 +37,9 @@ import { IrpfFormComponent } from './components/irpf/irpf-form/irpf-form.compone
 import { OverlayLoadingComponent } from './components/_generics/overlay-loading/overlay-loading.component';
 import { IrpfDeleteComponent } from './components/irpf/irpf-delete/irpf-delete.component';
 import { IrpsDashboardComponent } from './components/irpf/irps-dashboard/irps-dashboard.component';
+import { LoginComponent } from './views/login/login.component';
+import { AuthService } from './views/login/auth.service';
+import { AuthGuard } from './guards/auth-guard';
 
 @NgModule({
   imports: [
@@ -83,8 +86,9 @@ import { IrpsDashboardComponent } from './components/irpf/irps-dashboard/irps-da
     OverlayLoadingComponent,
     IrpfDeleteComponent,
     IrpsDashboardComponent,
+    LoginComponent,
   ],
-  providers: [],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

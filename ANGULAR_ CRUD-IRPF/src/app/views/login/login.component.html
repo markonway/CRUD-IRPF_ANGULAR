@@ -1,0 +1,13 @@
+<div class="login-content">
+    <div class="login-container">
+        <div class="logo-modal">
+            <img height="50" src="/assets/img/logo-irpf.png">
+            <h2>CRUD IRPF</h2>
+        </div>
+        <h3>Fazer Login</h3>
+        <input [(ngModel)]="user.username" type="text" id="username" placeholder="Seu usuário" autocomplete="off"/>
+        <input [(ngModel)]="user.password" type="password" name="password" id="password" placeholder="Sua senha" autocomplete="off"/>
+        <button class="submit" (click)="doLogin()">Entrar no sistema</button>
+    </div>
+    <div class="bg-img"></div>
+</div>

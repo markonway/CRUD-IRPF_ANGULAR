@@ -29,5 +29,19 @@
       "id": 28,
       "nome": "asd"
     }
+  ],
+  "users": [
+    {
+      "username": "mark",
+      "password": "123321"
+    },
+    {
+      "username": "mauricio",
+      "password": "456789"
+    },
+    {
+      "username": "genisvaldo",
+      "password": "teste"
+    }
   ]
 }
