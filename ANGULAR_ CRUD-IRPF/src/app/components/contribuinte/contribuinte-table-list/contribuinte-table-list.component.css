@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    width: 100%;
+}
+
+th.mat-header-cell, td.mat-cell {
+    text-align: center !important;
+}
+
+th.mat-header-cell a, td.mat-cell a {
+    cursor: pointer;
+}
+
+.button-box {
+    display: flex;
+    flex-direction: row;
+}
+
+.button-box button {
+    margin: 0px 5px 10px 0px;
+    border-radius: 16px;
+}
+
+.add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 35px;
+    background-color: rgb(35, 93, 255);
+    color: white;
+    border: none;
+}
+
+.add mat-icon, .edit mat-icon {
+    margin-right: 5px;
+}
+
+.edit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 35px;
+    background-color: rgb(255, 68, 55);
+    color: white;
+    border: none;
+}
+
+.acess {
+    padding: 4px 20px 4px 20px;
+    background-color: #003772;
+    color: white;
+    border: none;
+    border-radius: 16px;
+}

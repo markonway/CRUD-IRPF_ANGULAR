@@ -1,0 +1,13 @@
+<div class="overlay-contribuinte">
+    <div class="contribuinte-add-form">
+        <h2>Cadastrar Contribuinte</h2>
+        <input type="text" [(ngModel)]="contribuinte.nome" placeholder="Nome do Contribuinte">
+        <input type="text" [(ngModel)]="contribuinte.cpf" placeholder="CPF">
+        <input type="text" [(ngModel)]="contribuinte.codigoAcesso" placeholder="Código de Acesso">
+        <input type="text" [(ngModel)]="contribuinte.senha" placeholder="Senha">
+        <span class="button-row">
+            <button class="btn-save" (click)="save()" >Salvar</button>
+            <button class="btn-cancel" (click)="cancel()">Cancelar</button>
+        </span>
+    </div>
+</div>

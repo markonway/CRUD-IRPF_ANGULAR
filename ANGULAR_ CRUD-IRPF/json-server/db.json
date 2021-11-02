@@ -18,16 +18,43 @@
       "cep": "32900000"
     },
     {
-      "id": 25,
-      "nome": "ddf"
+      "id": 3,
+      "nome": "Arthur Cabral Lemos 222ssss",
+      "cpfCnpj": "11330410602",
+      "email": "acl_360@yahoo.com.brsdf",
+      "dtNascimento": "1994-10-15",
+      "tituloEleitoral": "205316680299",
+      "rendimentosTributaveis": 2500,
+      "endereco": "Rua Antonio Candido 66",
+      "cidade": "Igarapé - MG",
+      "bairro": "Cidade Nova",
+      "cep": "32900000"
     },
     {
-      "id": 27,
-      "nome": "ddd"
+      "id": 4,
+      "nome": "Arthur Cabral Lemos 222ssss",
+      "cpfCnpj": "11330410602",
+      "email": "acl_360@yahoo.com.brsdf",
+      "dtNascimento": "1994-10-15",
+      "tituloEleitoral": "205316680299",
+      "rendimentosTributaveis": 2500,
+      "endereco": "Rua Antonio Candido 66",
+      "cidade": "Igarapé - MG",
+      "bairro": "Cidade Nova",
+      "cep": "32900000"
     },
     {
-      "id": 28,
-      "nome": "asd"
+      "id": 5,
+      "nome": "Arthur Cabral Lemos 222ssss",
+      "cpfCnpj": "11330410602",
+      "email": "acl_360@yahoo.com.brsdf",
+      "dtNascimento": "1994-10-15",
+      "tituloEleitoral": "205316680299",
+      "rendimentosTributaveis": 2500,
+      "endereco": "Rua Antonio Candido 66",
+      "cidade": "Igarapé - MG",
+      "bairro": "Cidade Nova",
+      "cep": "32900000"
     }
   ],
   "users": [
@@ -42,6 +69,22 @@
     {
       "username": "genisvaldo",
       "password": "teste"
+    }
+  ],
+  "contribuintes": [
+    {
+      "cpf": "1993355445",
+      "codigoAcesso": "335546112",
+      "senha": "silCesar",
+      "nome": "Silvio Cesar",
+      "id": 1
+    },
+    {
+      "nome": "Bismark",
+      "cpf": "565684822",
+      "codigoAcesso": "4545454544",
+      "senha": "7823546872",
+      "id": 2
     }
   ]
 }

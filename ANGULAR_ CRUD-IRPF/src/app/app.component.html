@@ -1,4 +1,4 @@
-<div *ngIf="showMenu" class="wrapper">
+<div *ngIf="showMenu == false" class="wrapper">
   <div class="sidebar" data-image="./assets/img/sidebar-1.jpg">
     <app-sidebar></app-sidebar>
     <div class="sidebar-background" style="background-image: url(./assets/img/background2.jpg)"></div>
@@ -12,6 +12,6 @@
   </div>
 </div>
 
-<div *ngIf="showMenu == false" class="container">
+<div *ngIf="showMenu == true" class="container">
   <app-login></app-login>
 </div>

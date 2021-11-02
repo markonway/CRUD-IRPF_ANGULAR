@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 import { CurrencyMaskModule } from "ng2-currency-mask";
+import  {MatCurrencyFormatModule} from 'mat-currency-format';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './components/template/footer/footer.component';
 import { NavbarComponent } from './components/template/navbar/navbar.component';
@@ -19,6 +20,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatTableModule } from '@angular/material/table';
+import { MatIconModule } from '@angular/material/icon';  
 import { HttpClientModule } from '@angular/common/http';
 import { AgmCoreModule } from '@agm/core';
 import { TemplateComponent } from './components/template/template.component';
@@ -40,6 +43,12 @@ import { IrpsDashboardComponent } from './components/irpf/irps-dashboard/irps-da
 import { LoginComponent } from './views/login/login.component';
 import { AuthService } from './views/login/auth.service';
 import { AuthGuard } from './guards/auth-guard';
+import { CookieService } from 'ngx-cookie-service';
+import { ContribuinteTableListComponent } from './components/contribuinte/contribuinte-table-list/contribuinte-table-list.component';
+import { ContribuinteAddComponent } from './components/contribuinte/contribuinte-add/contribuinte-add.component';
+import { ViewContribuinteListComponent } from './views/contribuinte/view-contribuinte-list/view-contribuinte-list.component';
+import { ViewContribuinteAddComponent } from './views/contribuinte/view-contribuinte-add/view-contribuinte-add.component';
+import { ContribuinteEditComponent } from './components/contribuinte/contribuinte-edit/contribuinte-edit.component'
 
 @NgModule({
   imports: [
@@ -63,6 +72,9 @@ import { AuthGuard } from './guards/auth-guard';
     MatProgressSpinnerModule,
     HttpClientModule,
     CurrencyMaskModule,
+    MatTableModule,
+    MatCurrencyFormatModule,
+    MatIconModule
   ],
   declarations: [
     AppComponent,
@@ -87,8 +99,13 @@ import { AuthGuard } from './guards/auth-guard';
     IrpfDeleteComponent,
     IrpsDashboardComponent,
     LoginComponent,
+    ContribuinteTableListComponent,
+    ContribuinteAddComponent,
+    ViewContribuinteListComponent,
+    ViewContribuinteAddComponent,
+    ContribuinteEditComponent,
   ],
-  providers: [AuthService, AuthGuard],
+  providers: [AuthService, AuthGuard, CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

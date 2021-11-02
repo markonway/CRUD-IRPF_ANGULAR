@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import { User } from './user';
 import { Router } from '@angular/router';
-import { EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Users } from './users.model';
 import { Observable } from 'rxjs';
 import 'rxjs/Rx';
 import { IrpfService } from 'app/components/irpf/irpf.service';
+import { CookieService } from 'ngx-cookie-service'
+import { EventEmitter } from '@angular/core';
+import { BASE_URL } from 'app/constant'
 
 @Injectable({
   providedIn: 'root'
@@ -14,13 +16,12 @@ import { IrpfService } from 'app/components/irpf/irpf.service';
 
 export class AuthService {
 
-  private userAuthenticated: boolean = false
-  showMenuEmitter = new EventEmitter<boolean>()
-
-  private API_USERS: string = 'http://localhost:3001/users';
+  private API_USERS: string = `${BASE_URL}/users`;
   private user_list: Array<any> = []
 
-  constructor(private router: Router, private http: HttpClient, private IrpfService: IrpfService) { }
+  showMenuEmitter = new EventEmitter<boolean>()
+
+  constructor(private router: Router, private http: HttpClient, private IrpfService: IrpfService, private cookieService: CookieService) { }
 
   getUsers(): Observable<Users[]> {
     return this.http.get<Users[]>(this.API_USERS).map((data: Users[]) => data)
@@ -42,19 +43,14 @@ export class AuthService {
       }
     
       if(userFound){
-        this.userAuthenticated = true
-        this.showMenuEmitter.emit(true)
+        this.cookieService.set("logged", "true")
+        this.showMenuEmitter.emit(false)
         this.router.navigate(['dashboard'])
       } else {
+        this.showMenuEmitter.emit(true)
         this.IrpfService.showMessage("Credenciais de login Incorretas", false)
-        this.showMenuEmitter.emit(false)
-        this.userAuthenticated = false
       }
     })
-  }
-
-  userIsAuthenticated(){
-    return this.userAuthenticated
   }
 
 }

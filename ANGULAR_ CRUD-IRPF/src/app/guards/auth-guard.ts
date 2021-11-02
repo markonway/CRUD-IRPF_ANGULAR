@@ -3,6 +3,9 @@ import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router, CanLo
 import { Observable } from 'rxjs';
 import { AuthService } from 'app/views/login/auth.service';
 import { Route } from '@angular/compiler/src/core';
+import { CookieService } from 'ngx-cookie-service'
+import { EventEmitter } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Injectable({
   providedIn: 'root'
@@ -10,9 +13,13 @@ import { Route } from '@angular/compiler/src/core';
 
 export class AuthGuard implements CanActivate, CanLoad{
 
+  showMenuEmitter = new EventEmitter<boolean>()
+
   constructor(
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private cookieService: CookieService,
+    private location: Location
     ) { }
 
   canActivate(
@@ -23,14 +30,14 @@ export class AuthGuard implements CanActivate, CanLoad{
   }
 
   private checkAcess():any{
-    if(this.authService.userIsAuthenticated()){
+    if(this.cookieService.get("logged") == "true"){
       return true
     } else {
       this.router.navigate(['login'])
       return false
     }
   }
-  
+
   canLoad(route: Route): Observable<boolean>{
     return this.checkAcess()
   }

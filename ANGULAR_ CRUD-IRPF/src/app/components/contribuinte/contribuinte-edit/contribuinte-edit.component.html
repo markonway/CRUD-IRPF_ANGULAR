@@ -1,0 +1,13 @@
+<div class="overlay-contribuinte">
+    <div class="contribuinte-add-form">
+        <h2>Editar Contribuinte</h2>
+        <input type="text" [(ngModel)]="contribuinte.nome" placeholder="Nome do Contribuinte" value={{data.nome}}>
+        <input type="text" [(ngModel)]="contribuinte.cpf" placeholder="CPF" value={{data.cpf}}>
+        <input type="text" [(ngModel)]="contribuinte.codigoAcesso" placeholder="Código de Acesso" value={{data.codigoAcesso}}>
+        <input type="text" [(ngModel)]="contribuinte.senha" placeholder="Senha" value={{data.senha}}>
+        <span class="button-row">
+            <button class="btn-save" (click)="save()" >Salvar</button>
+            <button class="btn-cancel" (click)="cancel()">Cancelar</button>
+        </span>
+    </div>
+</div>

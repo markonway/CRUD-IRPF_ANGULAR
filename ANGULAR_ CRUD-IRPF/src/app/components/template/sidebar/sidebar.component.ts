@@ -11,6 +11,7 @@ export const ROUTES: RouteInfo[] = [
   { path: '/dashboard', title: 'Dashboard', icon: 'dashboard' },
   { path: '/create-irpf', title: 'Cadastrar IRPF', icon: 'list_alt' },
   { path: '/irpfs', title: 'IRPF\'s', icon: 'list' },
+  { path: '/contribuintes-list', title: 'ECAC', icon: 'assignment_ind' }
 ];
 
 @Component({
